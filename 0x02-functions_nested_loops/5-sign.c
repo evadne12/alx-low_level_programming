@@ -1,19 +1,31 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - Prints all single digit numbers of base 10 starting from 0.
- *
- * Return: Always 0.
+ * print_sign - check main
+ * @n: An integer input
+ * Description: Write a function that prints the sign of a number
+ * Return: print the sign of n
  */
-int main(void)
+
+int print_sign(int n)
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	if (n > 0)
 	{
-		putchar(i + '0');
+		/*printf("%d is greater than zero.\n", n);*/
+		_putchar('+');
+		return (1);
 	}
-	putchar('\n');
-
-	return (0);
+	else if (n == 0)
+	{
+		/*printf("%d is zero.\n", n);*/
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		/*printf("%d is less than zero\n", n);*/
+		_putchar('-');
+		return (-1);
+	}
 }
